@@ -101,7 +101,10 @@ def main():
 
     while True:
         print_menu()
-        choice = input("Select an option (1-6): ").strip()
+        try:
+            choice = input("Select an option (1-6): ").strip()
+        except EOFError:
+            break
 
         if choice == "1":
             handle_add_task(tasks)
