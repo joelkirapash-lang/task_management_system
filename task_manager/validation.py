@@ -54,5 +54,5 @@ def validate_due_date(due_date):
     try:
         parsed_date = datetime.strptime(due_date, "%Y-%m-%d")
     except ValueError:
-        return False, "Due date must be in YYYY-MM-DD format (e.g., 2024-06-26)."
+        raise ValueError("Due date must be in YYYY-MM-DD format (e.g., 2024-06-26).")
     return True, ""
