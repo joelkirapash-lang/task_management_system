@@ -41,7 +41,7 @@ def add_task(tasks, title, description, due_date):
         "completed": False,
     }
     tasks.append(task)
-    return True, "Task added successfully."
+    return True, "Task added successfully!"
 
 
 def mark_task_as_complete(tasks, title):
@@ -58,9 +58,9 @@ def mark_task_as_complete(tasks, title):
     for task in tasks:
         if task["title"].lower() == title.lower():
             if task["completed"]:
-                return False, f"Task '{task['title']}' is already marked as complete."
+                return False, f"Task '{task['title']}' is already marked as complete!"
             task["completed"] = True
-            return True, f"Task '{task['title']}' marked as complete."
+            return True, f"Task '{task['title']}' marked as complete!"
     return False, f"No task found with the title '{title}'."
 
 
